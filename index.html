@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site pour élèves ingénieurs</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #0078D7;
+      color: #fff;
+      padding: 1rem 0;
+      text-align: center;
+    }
+    header nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+    header nav ul li {
+      margin: 0 15px;
+    }
+    header nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+    }
+    .hidden {
+      display: none;
+    }
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    ul li a {
+      color: #0078D7;
+      text-decoration: none;
+    }
+  </style>
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll("section").forEach(section => {
+        section.classList.add("hidden");
+      });
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="showSection('home')">Accueil</a></li>
+        <li><a href="#" onclick="showSection('premiere-annee')">Première Année</a></li>
+        <li><a href="#" onclick="showSection('deuxieme-annee')">Deuxième Année</a></li>
+        <li><a href="#" onclick="showSection('concours')">Concours</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Bienvenue sur le site pour élèves ingénieurs</h1>
+    <p>Ce site est conçu pour vous aider à réussir vos études en classes préparatoires.</p>
+  </section>
+
+  <section id="premiere-annee" class="hidden">
+    <h1>Ressources pour la Première Année</h1>
+    <ul>
+      <li><a href="documents/maths_cours_premiere_annee.pdf" download>Mathématiques - Cours</a></li>
+      <li><a href="documents/physique_exercices_premiere_annee.pdf" download>Physique - Exercices</a></li>
+      <li><a href="documents/sciences_ingenieur_resume_premiere_annee.pdf" download>Sciences d'ingénieurs - Résumé</a></li>
+    </ul>
+  </section>
+
+  <section id="deuxieme-annee" class="hidden">
+    <h1>Ressources pour la Deuxième Année</h1>
+    <ul>
+      <li><a href="documents/maths_cours_deuxieme_annee.pdf" download>Mathématiques - Cours</a></li>
+      <li><a href="documents/physique_exercices_deuxieme_annee.pdf" download>Physique - Exercices</a></li>
+      <li><a href="documents/sciences_ingenieur_resume_deuxieme_annee.pdf" download>Sciences d'ingénieurs - Résumé</a></li>
+    </ul>
+  </section>
+
+  <section id="concours" class="hidden">
+    <h1>Ressources pour les Concours</h1>
+    <ul>
+      <li><a href="documents/maths_concours.pdf" download>Mathématiques - Concours</a></li>
+      <li><a href="documents/physique_concours.pdf" download>Physique - Concours</a></li>
+      <li><a href="documents/sciences_ingenieur_concours.pdf" download>Sciences d'ingénieurs - Concours</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 VotreNom. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
+
+
+
+
+
